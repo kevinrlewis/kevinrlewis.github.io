@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="k.css">
+    <title>Home</title>
+</head>
+<body>
+  <nav class="navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a data-toggle="tab" href="#home">Home </a></li>
+        <li><a data-toggle="tab" href="#experience">Experience </a></li>
+        <li><a data-toggle="tab" href="#education">Education </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <div class="container" style="margin: 0;">
+        <div class="col-md-12"><h1 id="name" class="text-center">Kevin Lewis</h1></div>
+        <img class="col-md-4 img-thumbnail rounded float-left" src="kev.png">
+        <div class="col-md-6 col-md-offset-1 panel panel-default">
+          <div class="panel-body">
+            <b>E-mail: </b>kevin.lewis_22@hotmail.com<br>
+          </div>
+        </div>
+        <div class="col-md-6 col-md-offset-1 panel panel-default">
+          <div class="panel-heading">chucknorris.io - API of Chuck Norris Facts <a class="btn-link col-md-3" style="float: right; cursor: pointer;" onclick="loadjoke()">Generate</a></div>
+          <div class="panel-body" id="chuck"></div>
+        </div>
+        <div class="col-md-6 col-md-offset-1">
+          <a class="btn btn-success" data-toggle="tab" href="#crypto">Cryptographic Cipher Tools</a>
+        </div>
+      </div>
+    </div>
+    <div id="experience" class="tab-pane fade">
+      <div class="container">
+        <div class="col-md-12"><h1 id="name" class="text-center">Experience</h1></div>
+        <div class="col-md-8 col-md-offset-2 panel panel-default">
+          <div class="panel-body">
+            <h3>Programming Experience</h3>
+            <b>Quality Assurance Engineer Intern</b><br>
+            L.L. Bean, Freeport, Maine | May 2016 - August 2016
+            <ul>
+              <li>Assisted with automating test cases using Selenium and Java</li>
+              <li>Created a graphing tool for JIRA that reported status depending on launch</li>
+              <li>Utilized the SCRUM agile methodology to manage progress</li>
+            </ul>
+            <br>
+            <b>Junior Software Engineer</b><br>
+            SimIS Inc., Portsmouth, Virginia | June 2012 - July 2012
+            <ul>
+              <li>XAML and C# programming language utilization</li>
+              <li>Collaboratively assisted in the development of the Automated Intelligence Mentoring System (AIMS), a virtual training and evaluation software</li>
+            </ul>
+            <h3>Customer Service Experience</h3>
+            <b>Customer Service Representative - 529 Plans</b><br>
+            Boston Financial, Rockland, Maine | June 2015 - August 2015
+            <ul>
+              <li>Assisted clients with various 529 plan inquiries</li>
+            </ul>
+            <b>Electronics Associate</b><br>
+            K-Mart, Virginia Beach, Virginia | March 2014 - August 2014
+            <ul>
+              <li>Maintined and updated sales items in the electronics department</li>
+              <li>Assisted customers with technical questions and purchases</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="education" class="tab-pane fade">
+      <div class="container">
+        <div class="col-md-12"><h1 id="name" class="text-center">Education</h1></div>
+        <div class="col-md-8 col-md-offset-2 panel panel-default">
+          <div class="panel-body">
+            <b>Bachelor of Science in Computer Science</b><br>
+            University of Maine, Orono, Maine | May 2017
+            <br><br>
+            <b>Relevant Coursework and Skills</b>
+            <ul>
+              <li><b>Languages: </b>Java, Python, Groovy, C, JavaScript, HTML</li>
+              <li><b>Tools: </b>Confluence, Jira, Zephyr, GitHub</li>
+              <li><b>Other: </b>Jenkins, Maven, git, Kivy, SCRUM, National Cyber League, Boostrap, Django</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="crypto" class="tab-pane fade">
+      <div class="col-md-12 col-sm-12"><h1 id="name" class="text-center">Cryptographic Cipher Tools</h1></div><br>
+      <div class="sidenav">
+        <div><a data-toggle="tab" href="#home"><i class="fa fa-arrow-left fa-2x"></i></a></div>
+        <div><a data-toggle="tab" href="#caesar" onclick="caesar()">Caesar</a></div>
+        <div><a data-toggle="tab" href="#atbash" onclick="atbash()">Atbash</a></div>
+        <div><a data-toggle="tab" href="#genmono" onclick="genmono()">General Mono</a></div>
+      </div>
+      <div class="container tab-content">
+        <div id="caesar" class="tab-pane fade">
+          <div class="col-md-8 col-md-offset-2 col-sm-8 panel panel-default">
+            <div id="caesar-body" class="cipher-body panel panel-body">
+              <div id="alpha-cont-caesar" class="alpha-cont container">
+                <div class="col-md-2"><h2>Caesar</h2></div>
+                <div id="plaintext-alpha-caesar" class="alphatext col-md-offset-2 col-md-8 col-sm-12 col-xs-12"></div>
+                <div id="ciphertext-alpha-caesar" class="alphatext col-md-4 col-md-offset-2 col-sm-12 col-xs-12"></div>
+                <div id="shift-op" class="col-md-3 col-md-offset-1">
+                  <div><a class="btn btn-default" onclick="left()"><</a> <b id="shift-amount">0</b> <a class="btn btn-default" onclick="right()">></a></div>
+                </div>
+              </div>
+              <br>
+              <form>
+                <div class="form-group">
+                  <label for="plaintextInput">Text to Encrypt</label>
+                  <input type="plaintext" class="form-control" id="plaintextInput" placeholder="Plaintext" style="padding-left: 5px;"><br>
+                  <div class="container" style="width: inherit;">
+                    <input type="button" class="btn btn-default text-center col-md-offset-5 col-md-2" style="padding: 5px;" value="Encrypt" onclick="encryptcaesar()"></button>
+                  </div><br>
+                  <label id="encrypted-caesar">Encrypted: </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="atbash" class="tab-pane fade">
+          <div class="col-md-8 col-md-offset-2 col-sm-8 panel panel-default">
+            <div id="atbash-body" class="cipher-body panel panel-body">
+              <div id="alpha-cont-atbash" class="alpha-cont container">
+                <div class="col-md-2"><h2>Atbash</h2></div>
+                <div id="plaintext-alpha-atbash" class="alphatext col-md-offset-2 col-md-8 col-sm-12 col-xs-12"></div>
+                <div id="ciphertext-alpha-atbash" class="alphatext col-md-offset-2 col-md-8 col-sm-12 col-xs-12"></div>
+              </div>
+              <br>
+              <form>
+                <div class="form-group">
+                  <label for="plaintextInput">Text to Encrypt</label>
+                  <input type="plaintext" class="form-control" id="plaintextInput-atbash" placeholder="Plaintext" style="padding-left: 5px;"><br>
+                  <div class="container" style="width: inherit;">
+                    <input type="button" class="btn btn-default text-center col-md-offset-5 col-md-2" style="padding: 5px;" value="Encrypt" onclick="encryptatbash()"></button>
+                  </div><br>
+                  <label id="encrypted-atbash">Encrypted: </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="genmono" class="tab-pane fade">
+          <div class="col-md-8 col-md-offset-2 col-sm-8 panel panel-default">
+            <div id="genmono-body" class="cipher-body panel panel-body">
+              <div id="alpha-cont-genmono" class="alpha-cont container">
+                <div class="col-md-4"><h2>General Monoalphabetic</h2></div>
+                <div id="plaintext-alpha-genmono" class="alphatext col-md-offset-1 col-md-5 col-sm-12 col-xs-12"></div>
+                <div id="ciphertext-alpha-genmono" class="alphatext col-md-offset-1 col-md-5 col-sm-12 col-xs-12"></div>
+                <div class="col-md-2 text-center"><input type="button" class="btn btn-default" value="Shuffle" style="padding: 4px;" onclick="genmono()"></input></div>
+              </div>
+              <br>
+              <form>
+                <div class="form-group">
+                  <label for="plaintextInput">Text to Encrypt</label>
+                  <input type="plaintext" class="form-control" id="plaintextInput-genmono" placeholder="Plaintext" style="padding-left: 5px;"><br>
+                  <div class="container" style="width: inherit;">
+                    <input type="button" class="btn btn-default text-center col-md-offset-5 col-md-2" style="padding: 5px;" value="Encrypt" onclick="encryptgenmono()"></button>
+                  </div><br>
+                  <label id="encrypted-genmono">Encrypted: </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="links">
+      <a href="https://www.facebook.com/profile.php?id=100000750072706"><i class="fa fa-facebook-official fa-3x"></i></a>
+      <br>
+      <a href="https://github.com/kevinrlewis"><i class="fa fa-github fa-3x"></i></a>
+      <br>
+      <a href="https://www.linkedin.com/in/kevin-lewis-6887348b/"><i class="fa fa-linkedin-square fa-3x"></i></a>
+    </div>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+      $(this).tab('show');
+    });
+    loadjoke();
+  });
+
+  function loadjoke() {
+    $.ajax({
+      dataType: "json",
+      url: "https://api.chucknorris.io/jokes/random",
+      success: function(data){
+        $("#chuck").text(data.value);
+      }
+    });
+  }
+
+  /**
+  * Randomize array element order in-place.
+  * Using Durstenfeld shuffle algorithm.
+  */
+  function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  }
+
+  function caesar() {
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    $('#plaintext-alpha-caesar').html(alphabet.join(''));
+    $('#ciphertext-alpha-caesar').html(alphabet.join(''));
+  }
+  function atbash() {
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    $('#plaintext-alpha-atbash').html(alphabet.join(''));
+    $('#ciphertext-alpha-atbash').html(alphabet.reverse());
+  }
+  function genmono() {
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    $('#plaintext-alpha-genmono').html(alphabet.join(''));
+    $('#ciphertext-alpha-genmono').html(shuffleArray(alphabet).join(''));
+  }
+
+  function left() {
+    shiftnum = parseInt($('#shift-amount').text());
+    if(shiftnum == 0) {
+      shiftnum = 25;
+      calphabet = $('#ciphertext-alpha-caesar').text().split('');
+      calphabet.push(calphabet.shift());
+      $('#ciphertext-alpha-caesar').html(calphabet.join(''));
+      $('#shift-amount').html(shiftnum);
+      return;
+    }
+    shiftnum = shiftnum - 1;
+    calphabet = $('#ciphertext-alpha-caesar').text().split('');
+    calphabet.push(calphabet.shift());
+    $('#ciphertext-alpha-caesar').html(calphabet.join(''));
+    $('#shift-amount').html(shiftnum);
+  }
+
+  function right() {
+    shiftnum = parseInt($('#shift-amount').text());
+    if(shiftnum == 25) {
+      shiftnum = 0;
+      alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+      $('#ciphertext-alpha-caesar').html(alphabet.join(''));
+      $('#shift-amount').html(shiftnum);
+      return;
+    }
+    shiftnum = shiftnum + 1;
+    calphabet = $('#ciphertext-alpha-caesar').text().split('');
+    calphabet.unshift(calphabet.pop());
+    $('#ciphertext-alpha-caesar').html(calphabet.join(''));
+    $('#shift-amount').html(shiftnum);
+  }
+
+  function encryptcaesar() {
+    palphabet = $('#plaintext-alpha-caesar').text().split('');
+    calphabet = $('#ciphertext-alpha-caesar').text().split('');
+    plaintext = $('#plaintextInput-caesar').val();
+    plaintext = plaintext.toLowerCase();
+    plaintext = plaintext.replace(/\s+/g, '');
+    enciphered = '';
+    for(i = 0; i < plaintext.length; i++) {
+      if($.inArray(plaintext[i], palphabet) == -1) {
+        continue;
+      } else {
+        enciphered += calphabet[palphabet.indexOf(plaintext[i])];
+      }
+    }
+
+    $('#encrypted-caesar').html("Encrypted: " + enciphered);
+  }
+
+  function encryptatbash() {
+    palphabet = $('#plaintext-alpha-atbash').text().split('');
+    calphabet = $('#ciphertext-alpha-atbash').text().split('');
+    plaintext = $('#plaintextInput-atbash').val();
+    plaintext = plaintext.toLowerCase();
+    plaintext = plaintext.replace(/\s+/g, '');
+    enciphered = '';
+    for(i = 0; i < plaintext.length; i++) {
+      if($.inArray(plaintext[i], palphabet) == -1) {
+        continue;
+      } else {
+        enciphered += calphabet[palphabet.indexOf(plaintext[i])];
+      }
+    }
+
+    $('#encrypted-atbash').html("Encrypted: " + enciphered);
+  }
+
+  function encryptgenmono() {
+    palphabet = $('#plaintext-alpha-genmono').text().split('');
+    calphabet = $('#ciphertext-alpha-genmono').text().split('');
+    plaintext = $('#plaintextInput-genmono').val();
+    plaintext = plaintext.toLowerCase();
+    plaintext = plaintext.replace(/\s+/g, '');
+    enciphered = '';
+    for(i = 0; i < plaintext.length; i++) {
+      if($.inArray(plaintext[i], palphabet) == -1) {
+        continue;
+      } else {
+        enciphered += calphabet[palphabet.indexOf(plaintext[i])];
+      }
+    }
+
+    $('#encrypted-genmono').html("Encrypted: " + enciphered);
+  }
+  </script>
+</body>
+</html>

@@ -1,14 +1,28 @@
 #name {
   font-size: 6em;
-  color: #999999;
+  color: maroon;
 }
 #links {
   position: fixed;
-  bottom: 40px;
+  bottom: 5px;
   right: 0px;
+}
+#nav-arrow {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
 }
 .alpha-cont {
   width: inherit;
+}
+.panel-body {
+  text-align: center;
+}
+#experience .panel-body {
+  text-align: left;
+}
+#education .panel-body {
+  text-align: left;
 }
 @media (max-width: 768px) {
   .nav-justified > li {
@@ -31,15 +45,15 @@
   #name {
     font-size: 3em;
   }
-  #links {
-    bottom: 45px;
-  }
   .panel-body {
     padding: 9px;
   }
 }
 a {
   color: #999999;
+}
+a:hover {
+  color: maroon;
 }
 small {
   font-size: 0.5em;
@@ -66,17 +80,17 @@ h2 {
   margin-top: 5px;
 }
 
-/* w3 The side navigation menu */
+/* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 150px;
+    width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 30px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -91,25 +105,42 @@ h2 {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+.sidenav>div>a:hover, .offcanvas a:focus{
+    color: maroon;
+}
+.submenu>div>a:hover, .offcanvas a:focus{
+    color: black;
 }
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
+    bottom: 0;
+    right: 5px;
     font-size: 36px;
     margin-left: 50px;
 }
+#sidenavbar div:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+.submenu a {
+  background-color: maroon;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-width: 768px) {
-    .sidenav {
-      padding-top: 15px;
-      width: 55px;
-    }
-    .sidenav a {font-size: 12px;
-    padding: 8px;}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#instr {
+  position: fixed;
+  bottom: 5px;
 }

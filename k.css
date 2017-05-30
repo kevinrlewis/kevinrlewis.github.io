@@ -24,6 +24,11 @@
 #education .panel-body {
   text-align: left;
 }
+@media (max-width: 992px) {
+  #pic {
+    margin-left: 25%;
+  }
+}
 @media (max-width: 768px) {
   .nav-justified > li {
     display: table-cell;
@@ -47,6 +52,9 @@
   }
   .panel-body {
     padding: 9px;
+  }
+  #pic {
+    margin-left: 25%;
   }
 }
 a {

@@ -152,3 +152,8 @@ h2 {
   position: fixed;
   bottom: 5px;
 }
+
+#projectlink {
+  font-size: 22px;
+  font-weight: bold;
+}
